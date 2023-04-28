@@ -25,25 +25,25 @@ class LogService implements ILogService
         $startDate = null;
         $endDate = null;
 
-        if (isset($serviceName['serviceName']))
+        if (isset($data['serviceName']))
         {
-            $serviceName = $serviceName['serviceName'];
+            $serviceName = $data['serviceName'];
         }
 
-        if (isset($serviceName['statusCode']))
+        if (isset($data['statusCode']))
         {
-            $statusCode = $serviceName['statusCode'];
+            $statusCode = $data['statusCode'];
         }
 
-        if (isset($serviceName['startDate']))
+        if (isset($data['startDate']))
         {
-            $startDate = $serviceName['startDate'];
+            $startDate = $data['startDate'];
             $startDate = DateTime::createFromFormat(self::TIME_FORMAT, $startDate);
         }
 
-        if (isset($serviceName['endDate']))
+        if (isset($data['endDate']))
         {
-            $endDate = $serviceName['endDate'];
+            $endDate = $data['endDate'];
             $endDate = DateTime::createFromFormat(self::TIME_FORMAT, $endDate);
         }
 
